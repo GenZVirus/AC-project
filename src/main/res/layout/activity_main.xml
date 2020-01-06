@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewNUM1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NR.1:"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewNUM2ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NR.2:"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNUM1" />
+
+    <TextView
+        android:id="@+id/textViewResultID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNUM2" />
+
+    <TextView
+        android:id="@+id/textViewNUM1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:clickable="true"
+        android:tag="nr3"
+        android:onClick="onClickText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNUM1ID" />
+
+    <TextView
+        android:id="@+id/textViewNUM2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:clickable="true"
+        android:tag="nr2"
+        android:onClick="onClickText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNUM2ID" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultID" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:alignmentMode="alignBounds"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewBCS"
+            android:layout_width="384dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="backspaceB"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/backspace_off"
+            tools:srcCompat="@drawable/backspace_off" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:alignmentMode="alignBounds"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewReset"
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="resetR"
+            app:layout_column="4"
+            app:layout_row="0"
+            app:srcCompat="@drawable/reset_off"
+            tools:srcCompat="@drawable/reset_off" />
+
+        <ImageView
+            android:id="@+id/imageViewNUM0"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="num00"
+            android:visibility="visible"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/num0_off"
+            tools:srcCompat="@drawable/num0_off"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageViewEnter"
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="enterE"
+            app:layout_column="4"
+            app:layout_row="1"
+            app:srcCompat="@drawable/enter_off"
+            tools:srcCompat="@drawable/enter_off" />
+
+        <ImageView
+            android:id="@+id/imageViewNUM1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="num11"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/num1_off"
+            tools:srcCompat="@drawable/num1_off" />
+
+        <ImageView
+            android:id="@+id/imageViewSUM"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="plus+"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/plus_off"
+            tools:srcCompat="@drawable/plus_off" />
+
+        <ImageView
+            android:id="@+id/imageViewMINUS"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:tag="minus-"
+            android:onClick="onClick"
+            app:layout_column="3"
+            app:layout_row="0"
+            app:srcCompat="@drawable/minus_off"
+            tools:srcCompat="@drawable/minus_off" />
+
+        <ImageView
+            android:id="@+id/imageViewOR"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:tag="or|"
+            android:onClick="onClick"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/or_off"
+            tools:srcCompat="@drawable/or_off" />
+
+        <ImageView
+            android:id="@+id/imageViewAND"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="and&amp;"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/and_off"
+            tools:srcCompat="@drawable/and_off" />
+
+        <ImageView
+            android:id="@+id/imageViewNOT"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="not!"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/not_off"
+            tools:srcCompat="@drawable/not_off" />
+
+        <ImageView
+            android:id="@+id/imageViewXOR"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:tag="xor*"
+            app:layout_column="3"
+            app:layout_row="1"
+            app:srcCompat="@drawable/xor_off"
+            tools:srcCompat="@drawable/xor_off" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textViewSFID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Function"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <TextView
+        android:id="@+id/textViewSF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSFID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
